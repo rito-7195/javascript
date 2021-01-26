@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let jam = prompt("Konversi jam ke menit\nMasukkan angka jam:")
+		let menit = prompt("Konversi menit ke jam\nMasukkan angka menit:")
+		let menit2 = prompt("Konversi menit ke tahun\nMasukkan angka menit:") 
+
+		jamToMenit(jam)
+		menitToJam(menit)
+		menitToTahun(menit2)
+
+		function jamToMenit(jam) {
+			jamMenit = parseInt(jam) * 60;
+			console.log(jam + " jam ke menit : " + jamMenit)	
+		}
+
+		function menitToJam(menit) {
+			menitJam = parseInt(menit) / 60;
+			console.log(menit + " menit ke jam : " + menitJam)
+		}
+
+		function menitToTahun(menit2) {
+			menitTahun = (((parseInt(menit2) / 60) / 24) / 365 )
+			console.log(menit2 + " menit ke tahun : " + menitTahun)
+		}
+	</script>
+</body>
+</html>

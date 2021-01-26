@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		number = prompt("Masukkan deret angka : ").split(",")
+
+		number = number.map(Number)
+
+		console.log(bubbleSort(number))
+
+		function bubbleSort(array) {
+			length = array.length
+
+			for (let i = 0; i < length-1; i++) {
+	            for (let j = 0; j < length-i-1; j++) {
+	                if (array[j] > array[j+1]) 
+	                { 
+	                    let temp = array[j]; 
+	                    array[j] = array[j+1]; 
+	                    array[j+1] = temp; 
+	                }
+	            }
+        	}
+
+        	return array
+		}
+		
+	</script>
+</body>
+</html>

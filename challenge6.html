@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let lahir = prompt("Masukkan tanggal lahir : ")
+
+		umur(lahir)
+
+		function umur(lahir) {
+			let today = new Date()
+
+			const dayToday = today.getDate()
+			const monthToday = (today.getMonth()+1)
+			const yearToday = today.getFullYear()
+			const jumlahHari = (yearToday * 365) + (monthToday * 30) + dayToday
+
+			const dayLive = parseInt(lahir.slice(0, 2))
+			const monthLive = parseInt(lahir.slice(3, 5))
+			const yearLive = parseInt(lahir.slice(6, lahir.length))
+			const live = (yearLive * 365) + (monthLive * 30) + dayLive
+
+			let umurTahun = Math.floor((jumlahHari - live) / 365)
+			let umurHari = (jumlahHari - live) % 365
+			console.log("Umur : " + umurTahun + " tahun " + umurHari + " hari")
+		}
+
+	//17-03-2000
+	</script>
+</body>
+</html>

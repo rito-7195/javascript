@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let deret = [-6, -4, 0, 1, 2, 2, 3, 10, 12, 44, 52, 72, 98]
+
+		let max = deret[(deret.length - 1)]
+		let min = deret[0]
+		let median
+		if (deret.length % 2 === 0) {
+			median = (deret[((deret.length/2) - 1)] + deret[(deret.length/2)]) / 2
+		} else {
+			median = deret[(Math.round(deret.length/2) - 1)]
+		}
+		let avg = ((deret.reduce((prev, current) => prev + current,0)) / deret.length)
+
+		console.log("Deret: " + deret)
+		console.log("Max: " + max)
+		console.log("Min: " + min)
+		console.log("Median: " + median)
+		console.log("Average: " + avg)
+	</script>
+</body>
+</html>
